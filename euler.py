@@ -11,7 +11,7 @@ y0=0.1
 delta=0.01
 r=2.0
 y1=funcionf(y0,delta,r)
-print u
+print y1
 
 n=100
 t=range(n)
