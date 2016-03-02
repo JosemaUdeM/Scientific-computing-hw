@@ -21,11 +21,11 @@ for i in range(11):
 	x0=x1
 	t[i]=y1
 for r in range(11):
-	y1=y0+delta*ky*y0-kxy*x0*y0
 	x1=x0+delta*kyx*y0*x0-kx*x0
+	y1=y0+delta*ky*y0-kxy*x0*y0
 	y0=y1
 	x0=x1
-	l[i]=x1
+	l[r]=x1
 
 print t
 print l
