@@ -40,7 +40,7 @@ print xnew
 print znew
 print tnew
 matplotlib.pyplot.plot(xnew,znew)
-matplotlib.pyplot.plot(tnew,xnew)
+matplotlib.pyplot.plot(xnew,tnew)
 matplotlib.pyplot.show()
 
 

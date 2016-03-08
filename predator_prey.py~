@@ -25,10 +25,3 @@ for i in range(11):
 print t
 print l
 
-tnew=numpy.array(t)
-lnew=numpy.array(l)
-print tnew
-print lnew
-
-matplotlib.pyplot.plot(tnew,lnew)
-matplotlib.pyplot.show()
