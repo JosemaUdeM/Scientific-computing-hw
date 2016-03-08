@@ -1,4 +1,5 @@
 #clase del 3 de marzo
+#atractor de lorenz
 import numpy
 import matplotlib
 import matplotlib.pyplot
@@ -18,11 +19,13 @@ y=range(10001)
 y[0]=y0
 x[0]=x0
 z[0]=z0
+<<<<<<< HEAD
 
 for i in range(10001):
 	x1=delta*(sigma*(y0-x0))
 	y1=delta*(x0*(rho-z0)-y0)
 	z1=delta*((x0*y0)-(beta*z0))
+
 	x0=x1
 	y0=y1
 	z0=z1
@@ -42,7 +45,6 @@ print tnew
 matplotlib.pyplot.plot(xnew,znew)
 matplotlib.pyplot.plot(tnew,xnew)
 matplotlib.pyplot.show()
-
 
 
 
