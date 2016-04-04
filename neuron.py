@@ -31,29 +31,30 @@ T=6.3
 Q=range(0.0,0.6)
 z=range(0,6)
 
-phi=3*math.exp((T-6.3)/10)
+def phi(T): 
+	return 3**((T-6.3)/10)
 
 
 
-ah=phi*(0.07 *math.exp(V/20))
+def an(V):
+	return phi(T)*(0.01*(V+10)/(math.exp((V+10)/10)-1))
 	
+def Bn(V):
+	return phi(T)*(0.125 *math.exp(V/80))
+
+
+def am(V):
+	return phi(T)*(0.01*(V+25)/(math.exp((V+25)/10)-1))
 	
+def Bm(V):
+	return phi(T)*(4 *math.exp(V/18))
 
-Bn=phi*(0.125 *math.exp(V/80))
 	
+def ah(V):
+	return phi(T)*(0.07 *math.exp(V/20))
 
-Bm=phi*(4 *math.exp(V/18))
-	
-
-
-an=phi*(0.01*(V+10)/(math.exp((V+10)/10)-1))
-	
-
-am=phi*(0.01*(V+25)/(math.exp((V+25)/10)-1))
-	
-
-
-Bh=phi*(1/(math.exp((V+30)/10)+1))
+def Bh(V):
+	return phi(T)*(1/(math.exp((V+30)/10)+1))
 	
 for i in range(0.0,0.6):
 	n1= n+delta*(an*(1-n)-Bn*n)
