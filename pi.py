@@ -1,18 +1,20 @@
-import numpy as np
-from numpy import random
+import math
 
 
-#np.random.seed(0)
-n=np.random.randrange(-1.5,1.5)
-print n
+L=3.0
+R=1.0
+N=1000
 
-#N=np.random.random()
-#L=3.0
-#R=1.0
 
-#def pi(n,N):
-#	return ((L/R)**2)*(n/N)
+def pi(L, R, N): 
+ 	n=0.0
+	for i in range(N):
+		x=L/2-L*np.random.random()
+		y=L/2-L*np.random.random()
+		Puntoxy=np.sqrt(x**2+y**2 )
+		if Puntoxy<=R : 
+			n=n+1
+	return (n/N)*(L/R)**2
 
-#print pi(n,N) 
-
+print "Numero pi aproximado:", pi(L,R,N)
 
