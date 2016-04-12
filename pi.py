@@ -1,9 +1,10 @@
+import numpy as np 
 import math
 
 
 L=3.0
 R=1.0
-N=1000
+N=100000
 
 
 def pi(L, R, N): 
@@ -14,6 +15,7 @@ def pi(L, R, N):
 		Puntoxy=np.sqrt(x**2+y**2 )
 		if Puntoxy<=R : 
 			n=n+1
+	
 	return (n/N)*(L/R)**2
 
 print "Numero pi aproximado:", pi(L,R,N)
