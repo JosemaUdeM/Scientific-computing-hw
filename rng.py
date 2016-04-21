@@ -38,12 +38,5 @@ def brownian(n):
 plt.plot(brownian(200))
 plt.show()
 
-def brownian2D(n, delta):
-	return brownian(n, delta), brownian(n, delta)
-	x, y = brownian2D(200, 0.2)
-plt.plot(x,y,'-')
-plt.plot(x[0], y[0], 'go')
-plt.plot(x[-1], y[-1], 'ro')
-plt.show()
 
 
