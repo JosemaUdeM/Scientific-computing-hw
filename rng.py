@@ -29,19 +29,21 @@ import matplotlib.pyplot as plt
 
 
 
+
 def brownian(n):
-	
-	t=200
+	x = np.random.normal(0.0,1, n)
+	x[0] = 0
+	x1= np.cumsum(x)
+	return x1
+plt.plot(brownian(200))
+plt.show()
 
-	xn = np.random.normal (0,1,n)
-	xn [0]=0
-	bins=50
-	y1,x1 = np.histogram(xn,bins = bins, density = True)
-	x1= x1 [0 : -1] + 0.5 * (x1[1] - x1[0])
-	plt.plot (x1,y1, 'b-')
-	plt.show()
+def brownian2D(n, delta):
+	return brownian(n, delta), brownian(n, delta)
+	x, y = brownian2D(200, 0.2)
+plt.plot(x,y,'-')
+plt.plot(x[0], y[0], 'go')
+plt.plot(x[-1], y[-1], 'ro')
+plt.show()
 
-print brownian(200)
-		
-		
 
